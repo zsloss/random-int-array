@@ -37,3 +37,8 @@ randomIntArray({ count: 3, min: 3, max: 11 });
 randomIntArray({ count: 10, max: 101, unique: true });
 // Returns an array of 10 integers between 0 and 100, with no duplicates.
 ```
+
+## Performance Note
+
+To enforce the uniqueness constraint, two different algorithms are used in this solution. Each algorithm performs badly depending on the values supplied for `count` and the range between `min` and `max`. After a bit of testing, I found that I should switch functions when the `count` is about 16% of the `max`-`min` range.
+
