@@ -1,4 +1,4 @@
-function makeUniqueRandomInts(count, min, max) {
+function hybrid(count, min, max) {
     if (count == undefined)
         throw new Error("You must supply a count as the first argument.");
     if (min == undefined)
@@ -20,14 +20,19 @@ function makeUniqueRandomInts(count, min, max) {
 
     var ret = [];
 
-    for (var i = 0; i < count; i++) {
+    while (count > 0) {
         var index = Math.floor(Math.random() * poolSize);
-        ret.push(pool[index]);
-        pool.splice(index, 1);
-        poolSize--;
+        if (ret.indexOf(pool[index]) == -1) {
+            ret.push(pool[index]);
+            count--;
+        }
+        else {
+            pool.splice(index, 1);
+            poolSize--;
+        }
     }
 
     return ret;
 }
 
-module.exports = makeUniqueRandomInts;
+module.exports = hybrid;
