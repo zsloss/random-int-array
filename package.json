@@ -17,7 +17,7 @@
     "array",
     "unique"
   ],
-  "author": "Zachary Sloss <zachary.sloss@gmail.com>",
+  "author": "Zachary Sloss <zachary.sloss@gmail.com> (http://www.zacharysloss.com)",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/zsloss/random-int-array/issues"
