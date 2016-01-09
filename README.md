@@ -17,7 +17,7 @@ var randomIntArray = require('random-int-array');
 var myRandomIntArray = randomIntArray(options);
 ```
 
-`options` is an object that should contain the following members:
+`options` should be an object containing the following members:
 * `count` - the number of integers in the array
 * `min` - the inclusive lower bound for each random integer (defaults to 0 if not supplied)
 * `max` - the exclusive upper bound for each random integer
