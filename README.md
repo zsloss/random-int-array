@@ -40,5 +40,4 @@ randomIntArray({ count: 10, max: 101, unique: true });
 
 ## Performance Note
 
-To enforce the uniqueness constraint, two different algorithms are used in this solution. Each algorithm performs badly depending on the values supplied for `count` and the range between `min` and `max`. After a bit of testing, I found that I should switch functions when the `count` is about 16% of the `max`-`min` range.
-
+When uniqueness is required, one of two different algorithms is selected. Each algorithm performs badly depending on the values supplied for `count` and the range between `min` and `max`. After a bit of testing, I found that I should switch functions when the `count` is about 16% of the `max`-`min` range, so that the best-performing algorithm is used.
